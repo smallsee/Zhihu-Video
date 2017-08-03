@@ -88,7 +88,7 @@ class VideoController extends Controller
     }
 
     public function index(){
-        dd($this->video->findAllArray());
+        return $this->video->findAllArray();
         $data  = $this->video->findAll();
         $new_data = $this->video->findNewVideoIn12();
         return view('video.index',compact('data','new_data'));
